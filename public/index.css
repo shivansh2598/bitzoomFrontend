@@ -1,0 +1,53 @@
+body
+{
+    animation:myfirst 10s;
+    -moz-animation:myfirst 10s infinite; /* Firefox */
+    -webkit-animation:myfirst 10s infinite; /* Safari and Chrome */
+    /* background-image: url("background1.jpg"); */
+    
+}
+
+
+@-moz-keyframes myfirst /* Firefox */ {
+    0% {
+        background:red;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    50% {
+        background:yellow;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    100% {
+        background:orange;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+    0% {
+        background:orange;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    50% {
+        background:yellow;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    100% {
+        background:orange;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+

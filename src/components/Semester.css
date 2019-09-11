@@ -1,0 +1,22 @@
+
+
+@media only screen and (max-width: 800px) {
+   .bttnee
+   {
+      width: 280px;
+      height: 50px;
+      margin: 20px;
+      border-radius: 15px;
+   }
+    
+  }
+  @media only screen and (min-width: 800px) {
+  .bttnee
+  {
+    width: 400px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 15px;
+  }
+  
+  }

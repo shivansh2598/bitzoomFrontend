@@ -1,0 +1,19 @@
+{
+  "name": "node-react-fileupload-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-dropdown-input": "^0.1.11",
+    "react-recaptcha": "^2.3.10",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "PORT=7789 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

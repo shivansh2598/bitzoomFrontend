@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+
+.heading
+  {
+      font-size: 60px;
+      color:white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+
+
+@media only screen and (max-width: 800px) {
+  .heading1
+  {
+      font-size: 50px;
+      color:white;
+      background-color: black;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+  
+}
+@media only screen and (min-width: 800px) {
+  .heading1
+{
+    font-size: 70px;
+    color:white;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+}
+
+
+/* style={{fontSize:'70px', color:"white",backgroundColor:"black",borderTopLeftRadius:'20px', borderTopRightRadius:'20px',borderBottomLeftRadius:'20px', borderBottomRightRadius:'20px'}} */

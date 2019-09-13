@@ -66,7 +66,7 @@ class DisplayImg extends Component
             return(
                 <div>
                     <br/>
-                    <h2 style={{fontWeight:'bolder'}}>Or go year wise...</h2>
+                    <h2 style={{fontWeight:'bolder', color:"white"}}>Or go year wise...</h2>
                     <div className='container-fluid'>
                         <div className='row'>
                         <div className='col-sm-3 col-md-3 col-lg-3'>

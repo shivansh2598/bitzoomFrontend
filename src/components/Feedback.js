@@ -10,6 +10,7 @@ class Feedback extends Component
         name:this.name.value,
         branch:this.branch.value,
         suggestion:this.suggestion.value,
+        email:this.email.value
       },{
         headers:{
           'x-access-token':localStorage.getItem('token')
@@ -57,6 +58,13 @@ class Feedback extends Component
           type="string" placeholder="Your branch" style={{textAlign:'center',width:'300px',borderRadius:'9999em',fontSize:'20px'}}
           ref={(ref)=>{
             this.branch=ref
+        }}
+          />
+           <legend>Email</legend>
+          <input 
+          type="string" placeholder="Optional" style={{textAlign:'center',width:'300px',borderRadius:'9999em',fontSize:'20px'}}
+          ref={(ref)=>{
+            this.email=ref
         }}
           />
           <legend>Suggestion</legend>

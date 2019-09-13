@@ -250,7 +250,7 @@ getsubject(semest)
         return(
             <div>
                 <br/>
-                    <h2 style={{fontWeight:'bolder'}}>Choose the semester</h2>
+                    <h2 style={{fontWeight:'bolder' , color:"white"}}>Choose the semester</h2>
                     <button className='btn btn-danger bttnee' onClick={()=>{this.changemystate(semA)}} >{semA} semester</button>
                     <button className='btn btn-danger bttnee' onClick={()=>{this.changemystate(semB)}} >{semB} semester</button>  
                     <br/>

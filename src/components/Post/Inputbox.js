@@ -631,7 +631,7 @@ getvalue(semest,branch)
 								this.uploadInput = ref;
 							}}
                             type="file"
-                            style={{display:'inline-block'}}
+                            style={{display:'inline-block', color:"white"}}
 						/>
 						<span id="fp"></span>
 					</div>
@@ -716,13 +716,15 @@ getvalue(semest,branch)
 					</div>
 					<br />
 					<div>
-                        <h3 style={{fontWeight:'bold'}}>Avoid uploading duplicate content</h3>
+                        <h3 style={{fontWeight:'bold', color:"white"}}>Avoid uploading duplicate content</h3>
+                        <br/>
+                        <h3 style={{fontWeight:'bold', color:"white"}}>Like and share our facebook page!!</h3>
                         <br/>
 						<button className="btn btn-danger" disabled={this.state.isdisabled}>Upload</button>
 					</div>
 					<br />
                     <br />
-					<h1 style={{fontWeight:'bold'}}>Uploaded Images & docs:-</h1>
+					<h1 style={{fontWeight:'bold', color:"white"}}>Uploaded Images & docs:-</h1>
                     </form>
             </div>
             	
@@ -738,7 +740,7 @@ getvalue(semest,branch)
 							ref={ref => {
 								this.uploadInput = ref;
                             }}
-                            style={{borderRadius:'9999em',width:'300px'}}
+                            style={{borderRadius:'9999em',width:'300px', color:"white"}}
 							type="file"
 						/>
 						<span id="fp"></span>
@@ -822,12 +824,12 @@ getvalue(semest,branch)
 					</div>
 					<br />
 					<div>
-                        <h3 style={{fontWeight:'bold'}}>Avoid uploading duplicate content</h3>
+                        <h3 style={{fontWeight:'bold' , color:"white"}}>Avoid uploading duplicate content</h3>
 						<button className="btn btn-danger" disabled={this.state.isdisabled}>Upload</button>
 					</div>
 					<br />
                     <br />
-					<h1 style={{fontWeight:'bold'}}>Uploaded Images & docs:-</h1>
+					<h1 style={{fontWeight:'bold' , color:"white"}}>Uploaded Images & docs:-</h1>
                     </form>
             </div>
             	

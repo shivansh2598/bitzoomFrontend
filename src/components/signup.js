@@ -98,7 +98,7 @@ export default class signup extends Component {
       </div>
       <div className='forgotpass'>
         <center>
-        <p>In case you forget your password mail us at shivanshsinha2598@gmail.com.</p>
+        <p>In case you forget your password mail us at bitzoom2k19@gmail.com.</p>
         </center>
       </div>
       </div>

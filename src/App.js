@@ -56,7 +56,7 @@ class App extends Component {
     if (this.state.verified === true) {
       return (
         <div className="App">
-          <div className="container-fluid" style={{ backgroundColor: "black" }}>
+          <div className="container-fluid" style={{backgroundColor:"rgba(0,0,0,.2)"}}>
             <div className="row">
               <div className="col-lg-4">
 				  <br/>
@@ -79,10 +79,10 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <h1 style={{ fontWeight: "bold" }}>Upload File Here</h1>
+          <h1 style={{ fontWeight: "bold" , color:"white" }}>Upload File Here</h1>
           <Inputbox />
           <br />
-          <h2 style={{ fontWeight: "bolder", marginBottom: "15px" }}>
+          <h2 style={{ fontWeight: "bolder", color:"white", marginBottom: "15px" }}>
             Search Specific Content
           </h2>
           <Searchbar />
@@ -94,7 +94,7 @@ class App extends Component {
     } else {
       return (
         <div>
-          <div style={{ backgroundColor: "black" }}>
+          <div >
             <center>
               <span className="heading">Bitzoom</span>
               <span className="float-right" style={{ marginTop: "10px" }}>

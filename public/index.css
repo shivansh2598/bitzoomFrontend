@@ -1,14 +1,15 @@
 body
 {
-    animation:myfirst 10s;
-    -moz-animation:myfirst 10s infinite; /* Firefox */
-    -webkit-animation:myfirst 10s infinite; /* Safari and Chrome */
+    /* animation:myfirst 10s; */
+    /* -moz-animation:myfirst 10s infinite; Firefox */
+    /* -webkit-animation:myfirst 10s infinite; Safari and Chrome */
     /* background-image: url("background1.jpg"); */
+    background-image: radial-gradient(circle, #000000, #090306, #0f070e, #120c15, #13101b, #1d2130, #223347, #22465d, #286f89, #2b9cb2, #3bcbd5, #5ffbf1);
     
 }
 
 
-@-moz-keyframes myfirst /* Firefox */ {
+/* @-moz-keyframes myfirst {
     0% {
         background:red;
         background-repeat: no-repeat;
@@ -28,9 +29,9 @@ body
         background-attachment: fixed;
     }
     
-}
-
-@-webkit-keyframes myfirst /* Safari and Chrome */ {
+}&*/
+/*
+@-webkit-keyframes myfirst {
     0% {
         background:orange;
         background-repeat: no-repeat;
@@ -49,5 +50,5 @@ body
         background-size: cover;
         background-attachment: fixed;
     }
-}
+} */
 

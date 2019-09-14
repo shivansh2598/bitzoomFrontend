@@ -8,8 +8,7 @@ import Feedback from "./components/Feedback";
 import Login from "./components/login";
 import Signup from "./components/signup";
 import axios from "axios";
-// import DropdownInput from 'react-dropdown-input'
-// import axios from 'axios'
+import logo from "./bitzoomLogo.png"
 
 class App extends Component {
   constructor() {
@@ -61,7 +60,7 @@ class App extends Component {
               <div className="col-lg-4">
 				  <br/>
                 <div
-                  class="fb-like"
+                  className="fb-like"
                   data-href="https://www.facebook.com/bitzoom2.0/"
                   data-width="300"
                   data-layout="button_count"
@@ -72,7 +71,7 @@ class App extends Component {
                 ></div>
               </div>
               <div className="col-lg-4">
-                <span className="heading1">Bitzoom</span>
+                <span className="heading1"> <img className = "bitzoomLogo" src={logo} /> <b>Bitzoom</b></span>
               </div>
               <div className="col-lg-4">
                 <Feedback function={this.changestate} />
@@ -96,7 +95,7 @@ class App extends Component {
         <div>
           <div >
             <center>
-              <span className="heading">Bitzoom</span>
+              <span className="heading"> <img className = "bitzoomLogo" src={logo} /> <b>Bitzoom</b></span>
               <span className="float-right" style={{ marginTop: "10px" }}>
                 <Login function={this.changestate} />
               </span>

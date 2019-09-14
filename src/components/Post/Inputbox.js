@@ -720,6 +720,8 @@ getvalue(semest,branch)
                         <br/>
                         <h3 style={{fontWeight:'bold', color:"white"}}>Like and share our facebook page!!</h3>
                         <br/>
+                        <h3 style={{fontWeight:'bold', color:"white"}}>Bitzoom is live from 9pm till 1am every day.</h3>
+                        <br/>
 						<button className="btn btn-danger" disabled={this.state.isdisabled}>Upload</button>
 					</div>
 					<br />

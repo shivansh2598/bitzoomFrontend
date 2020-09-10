@@ -1,7 +1,8 @@
 import React , { Component } from 'react'
 import axios from 'axios'
-import Post1 from './Post/Post1'
-import './searchbar.css'
+import Post1 from '../../Components/Jsx/Post1'
+import '../Css/searchbar.css'
+import { baseIp } from '../../config'
 
 class Searchbar extends Component
 {
@@ -17,7 +18,7 @@ class Searchbar extends Component
 
 
     getdata=()=>{
-        axios.get('http://192.168.157.128:4000/filterdata',{
+        axios.get(`${baseIp}/filterdata`,{
             params:{
             subject:this.subject1.value
             }

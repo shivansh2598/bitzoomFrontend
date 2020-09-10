@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { baseIp } from '../../config'
 
 export default class login extends Component {
  
   login=(event)=>{
       event.preventDefault();
-      axios.post('http://192.168.157.128:4000/login',{
+      axios.post(`${baseIp}/login`,{
         email:this.email.value,
         password:this.pass.value
       })

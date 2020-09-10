@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import './signup.css'
+import '../Css/signup.css'
 import axios from 'axios'
+import { baseIp } from '../../config'
 
 
 export default class signup extends Component {
   signup=(event)=>{
     event.preventDefault();
-    axios.post('http://192.168.157.128:4000/signup',{
+    axios.post(`${baseIp}/signup`,{
       name:this.name.value,
       email:this.email.value,
       roll:this.roll.value,
@@ -14,7 +15,6 @@ export default class signup extends Component {
       passwordconf:this.passwordconf.value
     })
     .then((response)=>{
-      // console.log(response)
       if(response.data.status===200)
       {
         localStorage.setItem('token',response.data.token)

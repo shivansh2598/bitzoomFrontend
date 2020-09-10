@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
-import DisplayImg from "./components/DisplayImg";
-import Footer from "./components/Footer";
-import Inputbox from "./components/Post/Inputbox";
-import Searchbar from "./components/searchbar";
-import Feedback from "./components/Feedback";
-import Login from "./components/login";
-import Signup from "./components/signup";
+import "./Css/App.css";
+import DisplayImg from "./Containers/Jsx/DisplayImg";
+import Footer from "./Components/Jsx/Footer";
+import Inputbox from "./Containers/Jsx/Inputbox";
+import Searchbar from "./Containers/Jsx/searchbar";
+import Feedback from "./Containers/Jsx/Feedback";
+import Login from "./Containers/Jsx/login";
+import Signup from "./Containers/Jsx/signup";
 import axios from "axios";
-import logo from "./bitzoomLogo.png"
+import logo from "./Images/bitzoomLogo.png"
+import { baseIp } from './config'
 
 class App extends Component {
   constructor() {
@@ -32,7 +33,7 @@ class App extends Component {
       });
     } else {
       axios
-        .get("http://192.168.157.128:4000/verifytoken", {
+        .get(`${baseIp}/verifytoken`, {
           headers: {
             "x-access-token": localStorage.getItem("token")
           }

@@ -1,14 +1,14 @@
 import React , {Component} from 'react'
 import axios from 'axios'
-import Post1 from './Post/Post1'
-import './Semester.css'
+import Post1 from '../../Components/Jsx/Post1'
+import '../Css/Semester.css'
+import { baseIp } from '../../config'
 
 class Semester extends Component
 {
     constructor(props)
     {
         super(props);
-        // console.log(props.semester)
         this.state={
             value:props.semester,
             check:0,
@@ -19,7 +19,7 @@ class Semester extends Component
 
 
     getimgs=(value1)=>{
-        axios.get('http://192.168.157.128:4000/getimgs',{
+        axios.get(`${baseIp}/getimgs`,{
             params: {
                 valuez:value1
               }

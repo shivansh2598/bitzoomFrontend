@@ -123,6 +123,23 @@ class Searchbar extends Component {
           </button>
           <br />
           <Post1 array={this.state.list.data} function={this.changestate} />
+          <br />
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              this.setState({
+                check : 1
+              })
+            }}
+            style={{
+              width: "300px",
+              margin: "40px",
+              borderRadius: "15px",
+              color: "white",
+            }}
+          >
+            Go Back
+          </button>
         </div>
       );
     }

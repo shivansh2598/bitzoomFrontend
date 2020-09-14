@@ -6,7 +6,6 @@ class Semester extends Component {
   constructor(props) {
     super();
     this.state = {
-      value: props.semester,
       check: 0,
       sem: 0,
     };
@@ -33,8 +32,8 @@ class Semester extends Component {
 
   render() {
     if (this.state.check === 0) {
-      var semA = this.state.value.value1;
-      var semB = this.state.value.value2;
+      var semA = this.props.semester.value1;
+      var semB = this.props.semester.value2;
 
       return (
         <div>

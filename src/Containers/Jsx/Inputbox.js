@@ -18,7 +18,7 @@ class Inputbox extends Component {
 
   componentDidUpdate() {
     axios
-      .get(`${baseIp}/subjectList`, {
+      .get(`${baseIp}/subjects/sem_branch`, {
         params: {
           semester: this.state.sem,
           branch: this.state.branch,
@@ -45,7 +45,7 @@ class Inputbox extends Component {
 
   componentDidMount() {
     axios
-      .get(`${baseIp}/subjectList`, {
+      .get(`${baseIp}/subjects/sem_branch`, {
         params: {
           semester: this.state.sem,
           branch: this.state.branch,
@@ -177,9 +177,9 @@ class Inputbox extends Component {
                 width: "300px",
               }}
             >
-              {this.state.subjectLst.map((item) => {
+              {this.state.subjectLst.map((item, key) => {
                 return (
-                  <option key={item._id} value={item.Subject}>
+                  <option key={key} value={item.Subject}>
                     {item.Subject}
                   </option>
                 );

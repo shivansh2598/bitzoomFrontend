@@ -4,7 +4,7 @@ import { baseIp } from "../../config";
 
 class Post1 extends Component {
   constructor(props) {
-    super(props);
+    super()
     this.state = {
       array: props.array,
     };
@@ -25,12 +25,12 @@ class Post1 extends Component {
               {dataitem.imageurl.substring(7, 30)} {dataitem.year}
             </span>
             <embed
-              src={baseIp + '/'+ dataitem.imageurl}
+              src={baseIp + "/" + dataitem.imageurl}
               alt={dataitem.year}
               style={{ height: "200px", width: "200px", margin: "15px" }}
             />
             <a
-              href={baseIp + '/'+ dataitem.imageurl}
+              href={baseIp + "/" + dataitem.imageurl}
               target="_blank"
               className="btn btn-danger"
               style={{ borderRadius: "9999em", color: "white" }}
@@ -40,7 +40,7 @@ class Post1 extends Component {
           </span>
         ))}
         <br />
-        <button
+        {/* <button
           className="btn btn-danger"
           onClick={() => {
             this.props.function(1);
@@ -53,7 +53,7 @@ class Post1 extends Component {
           }}
         >
           Go Back
-        </button>
+        </button> */}
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import { baseIp } from "./config";
 
+
 export const handleUploadImage = (ev, uploadInput, branch, semester, subject, year) => {
   ev.preventDefault();
 
@@ -51,3 +52,4 @@ export const getFileSize = () => {
     }
   }
 };
+ 

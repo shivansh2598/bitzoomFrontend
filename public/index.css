@@ -4,8 +4,8 @@ body
     /* -moz-animation:myfirst 10s infinite; Firefox */
     /* -webkit-animation:myfirst 10s infinite; Safari and Chrome */
     /* background-image: url("background1.jpg"); */
-    background-image: radial-gradient(circle, #000000, #090306, #0f070e, #120c15, #13101b, #1d2130, #223347, #22465d, #286f89, #2b9cb2, #3bcbd5, #5ffbf1);
-    
+       /* background-image: radial-gradient(circle, #000000, #090306, #0f070e, #120c15, #13101b, #1d2130, #223347, #22465d, #286f89, #2b9cb2, #3bcbd5, #5ffbf1); */
+       background-color: #183D5D !important; 
 }
 
 

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
+import { getFileSize, handleUploadImage } from "../../helper.js";
 import { baseIp } from "../../config";
 import axios from "axios";
-import { getFileSize , handleUploadImage}  from "../../helper.js"
-// import { Input } from "react-bootstrap";
 
 class Inputbox extends Component {
   constructor() {
@@ -10,37 +9,10 @@ class Inputbox extends Component {
     this.state = {
       sem: 1,
       branch: "Cse",
-      subjectLst: [],
-      subject: "English",
       year: 2014,
+      subject: "English",
+      subjectLst: [],
     };
-  }
-
-  componentDidUpdate() {
-    axios
-      .get(`${baseIp}/subjects/sem_branch`, {
-        params: {
-          semester: this.state.sem,
-          branch: this.state.branch,
-        },
-        headers: {
-          "x-access-token": localStorage.getItem("token"),
-        },
-      })
-      .then((response) => {
-        if (
-          response.data.data.length !== this.state.subjectLst.length ||
-          (response.data.data.length !== 0 &&
-            response.data.data[0].Subject !== this.state.subjectLst[0].Subject)
-        ) {
-          this.setState({
-            subjectLst: response.data.data,
-          });
-        }
-      })
-      .catch((err) => {
-        alert("something went wrong, try refresh");
-      });
   }
 
   componentDidMount() {
@@ -55,13 +27,54 @@ class Inputbox extends Component {
         },
       })
       .then((response) => {
-        this.setState({
-          subjectLst: response.data.data,
-        });
+        this.setState(
+          {
+            subjectLst: response.data.data,
+          },
+          () => {
+            this.setState({
+              subject: this.state.subjectLst[0].Subject,
+            });
+          }
+        );
       })
       .catch((err) => {
         alert("something went wrong, try refresh");
       });
+  }
+
+  componentDidUpdate(prevProps, prevStates) {
+    //prevProps and prevState are automatically available in componentDidUpdate
+    if (
+      prevStates.sem !== this.state.sem ||
+      prevStates.branch !== this.state.branch
+    ) {
+      axios
+        .get(`${baseIp}/subjects/sem_branch`, {
+          params: {
+            semester: this.state.sem,
+            branch: this.state.branch,
+          },
+          headers: {
+            "x-access-token": localStorage.getItem("token"),
+          },
+        })
+        .then((response) => {
+          this.setState(
+            {
+              subjectLst: response.data.data,
+            },
+            () => {
+              this.setState({
+                subject: this.state.subjectLst[0].Subject,
+              });
+            }
+          );
+        })
+        .catch((err) => {
+          alert("something went wrong, try refresh");
+        });
+    }
   }
 
   handleChange = (event) => {
@@ -99,7 +112,18 @@ class Inputbox extends Component {
     ];
     return (
       <div>
-        <form onSubmit={(event)=>{handleUploadImage(event, this.uploadInput, this.state.branch, this.state.sem, this.state.subject, this.state.year)}}>
+        <form
+          onSubmit={(event) => {
+            handleUploadImage(
+              event,
+              this.uploadInput,
+              this.state.branch,
+              this.state.sem,
+              this.state.subject,
+              this.state.year
+            );
+          }}
+        >
           <div>
             <input
               id="file"
@@ -210,12 +234,10 @@ class Inputbox extends Component {
             </select>
           </div>
           <br />
-          <button className="btn btn-danger">
-            Upload
-          </button>
+          <button className="btn btn-danger">Upload</button>
           <br />
           <br />
-          <h1 style={{ fontWeight: "bold", color: "white" }}>
+          <h1 style={{ fontWeight: "bold" , color : "white"}}>
             Uploaded Images & docs:-
           </h1>
         </form>

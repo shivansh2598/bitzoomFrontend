@@ -19,7 +19,7 @@ export const handleUploadImage = (ev, uploadInput, branch, semester, subject, ye
     },
   })
     .then((response) => {
-      return response.json();
+      window.location.reload();
     })
     .then((myJson) => {
       if (myJson.status !== 200) {

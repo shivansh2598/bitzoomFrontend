@@ -16,8 +16,7 @@ import Container from "@material-ui/core/Container";
 import axios from "axios";
 import { baseIp } from "../../config";
 import auth from "../../Components/Jsx/auth";
-import logo from "../../Images/bitzoomLogo.png";
-import '../Css/login.css'
+import Header from "../../Components/Jsx/Header"
 
 function Copyright() {
   return (
@@ -39,7 +38,7 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(6),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -80,17 +79,8 @@ export default function SignIn(props) {
   };
 
   return (
-    <div>
-      <div className="login_container">
-        <div>
-          <span className="login_heading">
-            {" "}
-            <img className="login_bitzoomLogo" src={logo} alt="" /> <b>Bitzoom</b>
-          </span>
-        </div>
-      </div>
-      <br />
-
+    <div style = {{minHeight : '100vh', backgroundImage: 'linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)'}}>
+      <Header />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>

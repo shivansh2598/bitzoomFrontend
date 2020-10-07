@@ -1,7 +1,15 @@
 import { baseIp } from "./config";
+import axios from "axios";
 
 
-export const handleUploadImage = (ev, uploadInput, branch, semester, subject, year) => {
+export const handleUploadImage = (
+  ev,
+  uploadInput,
+  branch,
+  semester,
+  subject,
+  year
+) => {
   ev.preventDefault();
 
   const data = new FormData();
@@ -11,20 +19,16 @@ export const handleUploadImage = (ev, uploadInput, branch, semester, subject, ye
   data.append("semester", semester);
   data.append("year", year);
 
-  fetch(`${baseIp}/upload`, {
-    method: "POST",
-    body: data,
-    headers: {
-      "x-access-token": localStorage.getItem("token"),
-    },
-  })
-    .then((response) => {
-      window.location.reload();
-    })
-    .then((myJson) => {
-      if (myJson.status !== 200) {
-        alert(myJson.msg);
+  axios.post(`${baseIp}/upload`,data,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          "x-access-token": localStorage.getItem("token"),
+        },
       }
+    )
+    .then((myJson) => {
+        alert(myJson.data.msg);
     })
     .catch((err) => {
       console.log("Some Error Occured");
@@ -52,4 +56,3 @@ export const getFileSize = () => {
     }
   }
 };
- 

@@ -1,7 +1,8 @@
 .FirstPage {
   text-align: center;
   background-color: #d14a9a;
-  background-image: -webkit-linear-gradient(105deg, #d253b1, #fb6f4a);
+  /* background-image: -webkit-linear-gradient(105deg, #d253b1, #fb6f4a); */
+  /* background-image: linear-gradient(105deg, #d253b1, #fb6f4a); */
   background-image: linear-gradient(345deg, #183d5d, #d253b1);
 }
 

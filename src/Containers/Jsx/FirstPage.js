@@ -40,7 +40,7 @@ class FirstPage extends Component {
               </span>
             </div>
             <div className="col-lg-4">
-              <Feedback function={this.props.func} />
+              <Feedback {...this.props} />
             </div>
           </div>
         </div>

@@ -1,0 +1,19 @@
+.Authentication {
+    text-align: center;
+  }
+
+.Authentication .heading
+  {
+      font-size: 60px;
+      color:white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-top: 2rem;
+  }
+
+.Authentication .bitzoomLogo{
+  height: 4rem;
+  width: 4rem;
+}

@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { baseIp } from '../../config'
+import auth from "../../Components/Jsx/auth"
 
 class Feedback extends Component {
+  constructor(props)
+  {
+    super();
+  }
   submit = () => {
     axios
       .post(
@@ -25,8 +30,11 @@ class Feedback extends Component {
   };
 
   logout = () => {
-    localStorage.setItem("token", null);
-    this.props.function(false);
+    auth.logout(()=>{
+      localStorage.setItem("token", null);
+      this.props.history.push('/login')
+    });
+
   };
 
   render() {

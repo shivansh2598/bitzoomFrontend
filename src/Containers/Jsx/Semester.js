@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Css/Semester.css";
-import FetchSubjectList from "../Jsx/FetchSubjects"
+import FetchSubjectList from "../Jsx/FetchSubjects";
 
 class Semester extends Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class Semester extends Component {
     } else {
       return (
         <div>
-            <FetchSubjectList sem = {this.state.sem} />
+          <FetchSubjectList sem={this.state.sem} />
           <button
             className="btn btn-danger bttnee"
             onClick={() => {
@@ -82,7 +82,7 @@ class Semester extends Component {
           </button>
         </div>
       );
-    } 
+    }
   }
 }
 

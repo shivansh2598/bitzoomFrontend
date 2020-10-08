@@ -64,7 +64,7 @@ export default function SignIn(props) {
   const login = (event) => {
     event.preventDefault();
     axios
-      .post(`${baseIp}/login`, {
+      .post(`${baseIp}/auth/login`, {
         email: Email,
         password: Password,
       })

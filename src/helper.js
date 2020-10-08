@@ -19,7 +19,7 @@ export const handleUploadImage = (
   data.append("semester", semester);
   data.append("year", year);
 
-  axios.post(`${baseIp}/upload`,data,
+  axios.post(`${baseIp}/main/upload`,data,
       {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -28,6 +28,7 @@ export const handleUploadImage = (
       }
     )
     .then((myJson) => {
+        console.log(myJson)
         alert(myJson.data.msg);
     })
     .catch((err) => {

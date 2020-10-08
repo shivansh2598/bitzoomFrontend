@@ -4,7 +4,7 @@ import { baseIp } from "../../config";
 
 class Post1 extends Component {
   constructor(props) {
-    super()
+    super();
     this.state = {
       array: props.array,
     };

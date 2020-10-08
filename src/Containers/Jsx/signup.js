@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignUp = () => {
+const SignUp = (props) => {
   //states
   const [FirstName, SetFirstName] = useState("");
   const [LastName, SetLastName] = useState("");
@@ -68,7 +68,7 @@ const SignUp = () => {
   const signup = (event) => {
     event.preventDefault();
     axios
-      .post(`${baseIp}/signup`, {
+      .post(`${baseIp}/auth/signup`, {
         name: FirstName + " " + LastName,
         email: Email,
         roll: Roll,
@@ -79,7 +79,7 @@ const SignUp = () => {
         if (response.data.status === 200) {
           Auth.login(() => {
             localStorage.setItem("token", response.data.token);
-            this.props.history.push("/app");
+            props.history.push("/app");
           });
         } else {
           alert(response.data.message);
@@ -89,7 +89,12 @@ const SignUp = () => {
   };
 
   return (
-    <div style = {{minHeight : '100vh', backgroundImage: 'linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)'}}> 
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundImage: "linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)",
+      }}
+    >
       <Header />
       <Container component="main" maxWidth="xs">
         <CssBaseline />

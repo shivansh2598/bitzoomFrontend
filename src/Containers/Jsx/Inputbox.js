@@ -237,7 +237,7 @@ class Inputbox extends Component {
           <button className="btn btn-danger">Upload</button>
           <br />
           <br />
-          <h1 style={{ fontWeight: "bold" , color : "white"}}>
+          <h1 style={{ fontWeight: "bold", color: "white" }}>
             Uploaded Images & docs:-
           </h1>
         </form>

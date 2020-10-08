@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { baseIp } from '../../config'
-import auth from "../../Components/Jsx/auth"
+import { baseIp } from "../../config";
+import auth from "../../Components/Jsx/auth";
 
 class Feedback extends Component {
-  constructor(props)
-  {
+  constructor(props) {
     super();
   }
   submit = () => {
     axios
       .post(
-        `${baseIp}/feedback`,
+        `${baseIp}/main/feedback`,
         {
           name: this.name.value,
           branch: this.branch.value,
@@ -30,11 +29,10 @@ class Feedback extends Component {
   };
 
   logout = () => {
-    auth.logout(()=>{
+    auth.logout(() => {
       localStorage.setItem("token", null);
-      this.props.history.push('/login')
+      this.props.history.push("/login");
     });
-
   };
 
   render() {

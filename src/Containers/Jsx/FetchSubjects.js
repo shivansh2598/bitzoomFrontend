@@ -14,7 +14,6 @@ class FetchSubjects extends Component {
 
   componentDidMount() {
     const { sem: semest } = this.props;
-
     axios
       .get(`${baseIp}/subjects/semester`, {
         params: {
@@ -36,10 +35,14 @@ class FetchSubjects extends Component {
   }
 
   getimgs = (value1) => {
+    const jwt = localStorage.getItem("token");
     axios
-      .get(`${baseIp}/getimgs`, {
+      .get(`${baseIp}/pic/getimgs`, {
         params: {
           valuez: value1,
+        },
+        headers: {
+          "x-access-token": jwt,
         },
       })
       .then((response) => {

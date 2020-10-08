@@ -16,9 +16,12 @@ class Searchbar extends Component {
 
   getdata = () => {
     axios
-      .get(`${baseIp}/filterdata`, {
+      .get(`${baseIp}/pic/filterdata`, {
         params: {
           subject: this.subject1.value,
+        },
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
         },
       })
       .then((response) => {
@@ -128,8 +131,8 @@ class Searchbar extends Component {
             className="btn btn-danger"
             onClick={() => {
               this.setState({
-                check : 1
-              })
+                check: 1,
+              });
             }}
             style={{
               width: "300px",

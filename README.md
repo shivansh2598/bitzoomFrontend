@@ -1,5 +1,5 @@
 Bitzoom runs on BIT Mesra’s LAN. This website contains previous
-year question papers and notes that are needed for semester exams.
+year question papers and notes that are required for our semester exams.
 
 It has over 200 users and 500 documents. Also users can upload
 relevant documents.

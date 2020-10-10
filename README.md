@@ -1,9 +1,8 @@
-• Bitzoom runs on BIT Mesra’s LAN. This website contains previous
+Bitzoom runs on BIT Mesra’s LAN. This website contains previous
 year question papers and notes that are needed for semester exams.
 
-• It has over 200 users and 500 documents. Also users can upload
+It has over 200 users and 500 documents. Also users can upload
 relevant documents.
-
 
 Install the packages using npm install.
 

@@ -15,7 +15,7 @@
     "react-recaptcha": "^2.3.10",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "PORT=7789 react-scripts start",
